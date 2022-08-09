@@ -1,0 +1,39 @@
+.post__container {
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 0.5vw;
+  margin: 2vw;
+  margin-left: 25%;
+}
+
+.post__headerContainer {
+  display: flex;
+  align-items: center;
+  margin: 0.7vw;
+}
+
+.post__headerAvatar {
+  margin-right: 1vw;
+}
+
+.post__image {
+  width: 100%;
+  object-fit: contain;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.post__captionContainer {
+  display: flex;
+  align-items: center;
+  margin: 0.7vw;
+}
+.post__viewsContainer {
+  display: flex;
+  align-items: center;
+  margin: 0.7vw;
+}
+
+.post__captionH5 {
+  font-weight: normal;
+}
