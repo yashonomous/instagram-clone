@@ -14,6 +14,7 @@ jobs:
       - run: cd instagram-clone-ui && npm ci --legacy-peer-deps && CI=false npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entryPoint: ./instagram-clone-ui
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_INSTAGRAM_CLONE_D11ED }}'
           channelId: live
