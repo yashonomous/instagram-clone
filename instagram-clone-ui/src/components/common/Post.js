@@ -3,7 +3,7 @@ import { Avatar } from "@material-ui/core";
 
 import "../../css/Post.css";
 
-const Post = ({ post }) => {
+const Post = ({ post, isDarkModeOn }) => {
   return (
     <div className="post__container">
       {/* header  = avatar + name*/}
@@ -13,7 +13,9 @@ const Post = ({ post }) => {
           alt="Remy Sharp"
           src={post.avatarImageSrc}
         />
-        <h3>{post.username} 🚀</h3>
+        <h3 className={isDarkModeOn ? "post__text dark" : "post__text"}>
+          {post.username} 🚀
+        </h3>
       </div>
 
       {/* image  = image*/}
@@ -28,11 +30,13 @@ const Post = ({ post }) => {
       {/* caption  = name + caption*/}
 
       <div className="post__viewsContainer">
-        <h5>100 views</h5>
+        <h5 className={isDarkModeOn ? "post__text dark" : "post__text"}>
+          100 views
+        </h5>
       </div>
 
       <div className="post__captionContainer">
-        <h5 className="post__captionH5">
+        <h5 className={isDarkModeOn ? "post__text dark" : "post__text"}>
           <strong>{post.username} 🚀 : </strong> {post.caption}
         </h5>
       </div>

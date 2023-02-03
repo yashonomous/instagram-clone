@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
-  margin: 1vw;
+  margin: 0 1vw 1vw 1vw;
 }
 
 .home__headerImage {

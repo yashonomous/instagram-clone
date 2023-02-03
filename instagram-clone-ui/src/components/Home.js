@@ -19,7 +19,7 @@ import CircularProgressWithLabel from "./common/CircularProgressWithLabel";
 import { ToggleButton } from "@material-ui/lab";
 import { Brightness4Rounded } from "@material-ui/icons";
 
-const Home = ({ loggedInUser }) => {
+const Home = ({ loggedInUser, setIsDarkModeOn, isDarkModeOn }) => {
   const navigate = useNavigate();
   const [cookies, setCookie, removeCookie] = useCookies(["username"]);
   const [posts, setPosts] = useState([]);
@@ -135,7 +135,10 @@ const Home = ({ loggedInUser }) => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
           alt="ig-logo"
         />
-        <ToggleButton selected={false}>
+        <ToggleButton
+          selected={false}
+          onClick={() => setIsDarkModeOn(!isDarkModeOn)}
+        >
           <Brightness4Rounded />
         </ToggleButton>
         <Button variant="contained" color="secondary" onClick={handleLogout}>
@@ -202,7 +205,11 @@ const Home = ({ loggedInUser }) => {
       </div>
       <div className="home__posts">
         {posts.map((post) => (
-          <Post key={post.postId} post={post.data} />
+          <Post
+            key={post.postId}
+            post={post.data}
+            isDarkModeOn={isDarkModeOn}
+          />
         ))}
       </div>
     </>

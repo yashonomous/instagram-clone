@@ -37,3 +37,11 @@
 .post__captionH5 {
   font-weight: normal;
 }
+
+.post__text{
+  color:black;
+}
+
+.post__text.dark{
+  color: white;
+}
