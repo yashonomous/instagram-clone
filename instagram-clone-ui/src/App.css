@@ -1,6 +1,5 @@
 .app {
   background-color: white;
-  display: flex;
 }
 .app.dark {
   background-color: grey;
